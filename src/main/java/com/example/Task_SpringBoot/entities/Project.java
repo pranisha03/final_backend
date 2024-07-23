@@ -21,7 +21,7 @@ public class Project {
     private Date startDate;
     private Date endDate;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = false)  // Ensure eager fetch type aligns with your performance needs
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "owner_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private User owner;
